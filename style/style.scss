@@ -1,0 +1,21 @@
+$cGray:rgb(166, 166, 166);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    & .a-header {
+        height: 100%;
+        background-color: $cGray;
+        height: 200px;
+        position: relative;
+
+        & img {
+            height: 100%;
+            position: absolute;
+            left: 50px;
+        }
+    }
+}
