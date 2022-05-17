@@ -3,19 +3,62 @@ $cGray:rgb(166, 166, 166);
 * {
     margin: 0;
     padding: 0;
+    background-color: $cGray;
 }
 
 header{
-    & .a-header {
-        height: 100%;
-        background-color: $cGray;
-        height: 200px;
-        position: relative;
+    position: relative;
+    max-width: 960px;
+    height: 270px;
+    margin: 0 auto;
+    & .header__inner {
+        // top: 0;
+        // left: 0;
+        // height: 270px;
+        // position: relative;
 
         & img {
-            height: 100%;
+            top: 50px;
+            height: 50%;
             position: absolute;
-            left: 50px;
+            left: 200px;
+        }
+    }
+
+    & nav {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        & ul {
+            list-style: none;
+            &.cf {
+                zoom: 1;
+                & ::before{
+                    content: "";
+                    display: table;
+                }
+                
+                & li {
+                    margin-left: 50px;
+                    display: inline;
+                    float: none;
+                    border-bottom: none;
+                    text-align: right;
+                    width: 50%;
+                    & .about{
+                    
+                    }
+                    & .apps{
+                        
+                    }
+                    & .blog{
+                        
+                    }
+                    & .contact{
+                        
+                    }
+                }
+            }
         }
     }
 }
