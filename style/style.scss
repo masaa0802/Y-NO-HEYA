@@ -1,27 +1,105 @@
 $cGray:rgb(166, 166, 166);
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: $cGray;
 }
+::before , ::after {
+	box-sizing: inherit;
+}
 
-header{
+
+
+header {
     position: relative;
-    max-width: 960px;
     height: 270px;
-    margin: 0 auto;
-    & .header__inner {
-        // top: 0;
-        // left: 0;
-        // height: 270px;
-        // position: relative;
+    @media screen and (min-width: 600px) {
+        .btn {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100px;
+        }
+    }
 
+    & .logo {
         & img {
             top: 50px;
             height: 50%;
             position: absolute;
             left: 200px;
+        }
+    }
+    & button {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: inherit;
+        vertical-align: middle;
+        text-align: inherit;
+        font: inherit;
+        appearance: none;
+
+        & .btn {
+            position: fixed;
+            top: 32px;
+            right: 16px;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+
+            & .btn-line {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 4px;
+                background-color: #d6d5d5;
+                transition: .2s;
+
+                &::before , ::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #d6d5d5;
+                    transition: .5s;
+                }
+
+                &::before {
+                    transform: translateY(-16px);
+                }
+                &::after {
+                    transform: translateY(16px);
+                }
+                & .open {
+                    background-color: transparent;
+
+                    &::before , ::after {
+                        content: "";
+                        background-color: #333;
+                        transition: .2s;
+                    }
+
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+                    
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
         }
     }
 
@@ -30,33 +108,35 @@ header{
         bottom: 30px;
         right: 0;
         & ul {
-            list-style: none;
-            &.cf {
-                zoom: 1;
-                & ::before{
-                    content: "";
-                    display: table;
+            & .menu {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                right: -70%;
+                width: 70%;
+                height: 100vh;
+                background-color: rgba(167, 148, 58, .7);
+                color: #efefef;
+                transition: .3s;
+
+                &.menu-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    &
+                    & :hover {
+                        background-color: rgba(255, 255, 255, .5);
+                        color: #333;
+                        cursor: pointer;
+                        transition: .3s;
+                    }
                 }
-                
-                & li {
-                    margin-left: 50px;
-                    display: inline;
-                    float: none;
-                    border-bottom: none;
-                    text-align: right;
-                    width: 50%;
-                    & .about{
-                    
-                    }
-                    & .apps{
-                        
-                    }
-                    & .blog{
-                        
-                    }
-                    & .contact{
-                        
-                    }
+
+                & .open {
+                    position: absolute;
+                    right: 0;
                 }
             }
         }
