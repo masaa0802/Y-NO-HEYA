@@ -5,35 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yの部屋</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="/image/Yの部屋.png">
+    <link rel="stylesheet" href="styles/loader.css">
+    <script src="scripts/vendors/pace.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/vendors/swiper.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-    <!-- <header class="header"> -->
-        <!-- <div class="logo">
-            <img src="/image/Yの部屋 トップロゴ.png" alt="Yの部屋ロゴ">
-        </div> -->
-        <button type="button" class="btn js-btn">
-            <span class="btn-line"></span>
-        </button>
-        <nav>
-            <ul class="menu">
-                <li class="menu-list"><a href="#">ABOUT</a></li>
-                <li class="menu-list"><a href="#">APPS</a></li>
-                <li class="menu-list"><a href="#">BLOG</a></li>
-                <li class="menu-list"><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-        <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    <!-- </header> -->
+    <div id="global-container">
+        <div id="container">
+            <div class="mobile-menu__cover"></div>
+            <div class="nav-trigger"></div>
+            <header class="header">
+                <div class="header__inner appear up">
+                    <div class="logo item">
+                        <img src="/image/Yの部屋 トップロゴ.png" class="logo__img" alt="Yの部屋ロゴ" />
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__ul">
+                            <li class="header__li item"><a href="#">ABOUT</a></li>
+                            <li class="header__li item"><a href="#">APPS</a></li>
+                            <li class="header__li item"><a href="#">BLOG</a></li>
+                            <li class="header__li item">
+                                <a class = "btn filled" href="#">CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="mobile-menu__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </header>
+        </div>
+    </div>
+    <script src="scripts/vendors/swiper.min.js"></script>
+    <script src="scripts/vendors/TweenMax.min.js"></script>
+    <script src="scripts/vendors/scroll-polyfill.js"></script>
+    <script src="scripts/libs/scroll.js"></script>
+    <script src="scripts/libs/text-animation.js"></script>
+    <script src="scripts/libs/hero-slider.js"></script>
+    <script src="scripts/libs/mobile-menu.js"></script>
+    <script src="scripts/main.js"></script>
+
     <main>
-
+        <img src="/image/MY-PRODUCT画面.png" alt="MY-PRODUCT画面" height="500px">
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
